@@ -1,0 +1,3 @@
+CREATE DATABASE project_1;
+
+-- DROP DATABASE IF EXISTS sql_course;
