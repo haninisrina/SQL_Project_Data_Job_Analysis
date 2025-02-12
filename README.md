@@ -13,6 +13,8 @@ The data used serves as the foundation for this analysis, offering detailed info
 SELECT table_name 
 FROM information_schema.tables 
 WHERE table_schema = 'public';
+```
+Result: 
 
 ```json
 [
@@ -29,6 +31,6 @@ WHERE table_schema = 'public';
     "table_name": "skills_dim"
   }
 ]
-
+```
 -**View table structure**:
 -**Check the number of rows and columns**:
