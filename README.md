@@ -7,7 +7,8 @@ The data used serves as the foundation for this analysis, offering detailed info
 - **PostgreSQL**: A database management system utilized for storing and managing job posting data.  
 - **Visual Studio Code**: A code editor employed for writing and executing SQL queries.  
 - **Git & GitHub**: Used for version control, project tracking, and sharing scripts and analyses.
-# Exploratory Data Analysis (EDA)  
+# Exploratory Data Analysis (EDA) 
+## 1. Understanding Data Structure 
 - **Check available tables**:
 ```sql
 SELECT table_name 
@@ -87,7 +88,7 @@ Result:
 | type       | text      |
 
 
-- **Check the number of rows and columns**:
+- **Check the number of rows**:
 ```sql
 SELECT COUNT(*) AS total_rows FROM company_dim;
 ```
@@ -119,4 +120,107 @@ Result:
 | total_rows |
 |------------|
 | 259     |
+
+## 2.Assessing Data Quality
+- **Check missing values per column**
+```sql
+SELECT column_name, null_count
+FROM (
+    SELECT unnest(array[
+        'company_id', 'name', 'link', 'link_google', 'thumbnail'
+    ]) AS column_name,
+    unnest(array[
+        (SELECT COUNT(*) FROM company_dim WHERE company_id IS NULL),
+        (SELECT COUNT(*) FROM company_dim WHERE name IS NULL),
+        (SELECT COUNT(*) FROM company_dim WHERE link IS NULL),
+        (SELECT COUNT(*) FROM company_dim WHERE link_google IS NULL),
+        (SELECT COUNT(*) FROM company_dim WHERE thumbnail IS NULL)
+    ]) AS null_count
+) AS subquery
+ORDER BY null_count DESC;
+```
+Result:
+| column_name  | null_count |
+|-------------|------------|
+| link        | 86001      |
+| thumbnail   | 58921      |
+| link_google | 24         |
+| name        | 1          |
+| company_id  | 0          |
+
+```sql
+SELECT attname AS column_name, 
+       (SELECT COUNT(*) FROM company_dim WHERE row_to_json(company_dim) ->> attname IS NULL) AS null_count
+FROM pg_stats 
+WHERE tablename = 'company_dim'
+ORDER BY null_count DESC;
+```
+Result:
+| column_name  | null_count |
+|-------------|------------|
+| link        | 86001      |
+| thumbnail   | 58921      |
+| link_google | 24         |
+| name        | 1          |
+| company_id  | 0          |
+
+```sql
+SELECT attname AS column_name, 
+       (SELECT COUNT(*) FROM job_postings_fact WHERE row_to_json(job_postings_fact) ->> attname IS NULL) AS null_count
+FROM pg_stats 
+WHERE tablename = 'job_postings_fact'
+ORDER BY null_count DESC;
+```
+Result: 
+| column_name            | null_count |
+|------------------------|------------|
+| salary_hour_avg       | 777021      |
+| salary_year_avg       | 765652      |
+| salary_rate           | 754586      |
+| job_schedule_type     | 12705       |
+| job_location         | 1053        |
+| job_country          | 52          |
+| job_via             | 9           |
+| job_title           | 1           |
+| search_location     | 0           |
+| company_id         | 0           |
+| job_title_short     | 0           |
+| job_work_from_home  | 0           |
+| job_id             | 0           |
+| job_posted_date    | 0           |
+| job_no_degree_mention | 0        |
+| job_health_insurance | 0        |
+
+```sql
+SELECT attname AS column_name, 
+       (SELECT COUNT(*) FROM skills_job_dim WHERE row_to_json(skills_job_dim) ->> attname IS NULL) AS null_count
+FROM pg_stats 
+WHERE tablename = 'skills_job_dim'
+ORDER BY null_count DESC;
+```
+Result:
+| column_name | null_count |
+|------------|------------|
+| job_id     | 0          |
+| skill_id   | 0          |
+
+```sql
+SELECT attname AS column_name, 
+       (SELECT COUNT(*) FROM skills_dim WHERE row_to_json(skills_dim) ->> attname IS NULL) AS null_count
+FROM pg_stats 
+WHERE tablename = 'skills_dim'
+ORDER BY null_count DESC;
+
+```
+Result:
+| column_name | null_count |
+|------------|------------|
+| skill_id   | 0          |
+| skills     | 0          |
+| type       | 0          |
+
+- **Check for duplicate records (based on all columns)**
+- **Check for duplicate values in a specific column**
+- **Count unique values in a column**
+
 
