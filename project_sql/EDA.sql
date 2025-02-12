@@ -49,7 +49,7 @@ WHERE table_name = 'skills_dim';
 
 --2.Assessing Data Quality
 -- Check missing values per column
-
+-- ex query for table company_dim
 SELECT column_name, null_count
 FROM (
     SELECT unnest(array[
@@ -90,6 +90,45 @@ FROM pg_stats
 WHERE tablename = 'skills_dim'
 ORDER BY null_count DESC;
 
+
+-- Count unique values in each column
+SELECT attname AS column_name, n_distinct
+FROM pg_stats
+WHERE tablename = 'company_dim'
+ORDER BY n_distinct DESC;
+
+SELECT attname AS column_name, n_distinct
+FROM pg_stats
+WHERE tablename = 'job_postings_fact'
+ORDER BY n_distinct DESC;
+
+SELECT attname AS column_name, n_distinct
+FROM pg_stats
+WHERE tablename = 'skills_job_dim'
+ORDER BY n_distinct DESC;
+
+SELECT attname AS column_name, n_distinct
+FROM pg_stats
+WHERE tablename = 'skills_dim'
+ORDER BY n_distinct DESC;
+
 -- Check for duplicate records (based on all columns)
--- Check for duplicate values in a specific column
--- Count unique values in a column
+-- based on all colomns 
+SELECT link, thumbnail, link_google, name, COUNT(*)
+FROM company_dim
+GROUP BY link, thumbnail, link_google, name
+HAVING COUNT(*) > 1;
+
+--or based on company_id (bisa dilakukan jika primary key tidak 100% unique(dilihat pada pengecekan sebelumnya))
+
+WITH duplicates AS (
+    SELECT company_id, COUNT(*)
+    FROM company_dim
+    GROUP BY company_id
+    HAVING COUNT(*) > 1
+)
+SELECT c.*
+FROM company_dim c
+JOIN duplicates d ON c.company_id = d.company_id;
+
+
