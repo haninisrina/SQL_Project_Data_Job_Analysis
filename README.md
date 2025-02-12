@@ -9,10 +9,12 @@ The data used serves as the foundation for this analysis, offering detailed info
 - **Git & GitHub**: Used for version control, project tracking, and sharing scripts and analyses.
 # Exploratory Data Analysis (EDA)  
 -**Check available tables**:
+```sql
 SELECT table_name 
 FROM information_schema.tables 
 WHERE table_schema = 'public';
 
+```json
 [
   {
     "table_name": "company_dim"
