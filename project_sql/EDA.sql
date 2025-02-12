@@ -102,6 +102,10 @@ FROM pg_stats
 WHERE tablename = 'job_postings_fact'
 ORDER BY n_distinct DESC;
 
+SELECT *
+FROM job_postings_fact
+LIMIT 15;
+
 SELECT attname AS column_name, n_distinct
 FROM pg_stats
 WHERE tablename = 'skills_job_dim'
@@ -114,9 +118,47 @@ ORDER BY n_distinct DESC;
 
 -- Check for duplicate records (based on all columns)
 -- based on all colomns 
-SELECT link, thumbnail, link_google, name, COUNT(*)
-FROM company_dim
-GROUP BY link, thumbnail, link_google, name
+
+/*buat ngambil nama colom
+SELECT format(
+    'SELECT %s, COUNT(*) FROM company_dim GROUP BY %s HAVING COUNT(*) > 1;',
+    string_agg(quote_ident(column_name), ', '),
+    string_agg(quote_ident(column_name), ', ')
+)
+FROM information_schema.columns
+WHERE table_name = 'company_dim';
+
+*/
+
+SELECT link, thumbnail, link_google, name, COUNT(*) 
+FROM company_dim 
+GROUP BY link, thumbnail, link_google, name 
+HAVING COUNT(*) > 1;
+
+SELECT 
+    job_work_from_home, job_posted_date, job_no_degree_mention, 
+    job_health_insurance, salary_year_avg, salary_hour_avg, 
+    search_location, salary_rate, job_title_short, job_title, 
+    job_location, job_via, job_schedule_type, job_country, 
+    company_id, COUNT(*) 
+FROM job_postings_fact 
+GROUP BY 
+    job_work_from_home, job_posted_date, job_no_degree_mention, 
+    job_health_insurance, salary_year_avg, salary_hour_avg, 
+    search_location, salary_rate, job_title_short, job_title, 
+    job_location, job_via, job_schedule_type, job_country, 
+    company_id
+HAVING COUNT(*) > 1
+ORDER BY company_id;
+
+SELECT job_id,skill_id, COUNT(*)
+FROM skills_job_dim
+GROUP BY job_id,skill_id
+HAVING COUNT(*) > 1;
+
+SELECT skill_id,skills,type, COUNT(*)
+FROM skills_dim
+GROUP BY skill_id,skills,type
 HAVING COUNT(*) > 1;
 
 --or based on company_id (bisa dilakukan jika primary key tidak 100% unique(dilihat pada pengecekan sebelumnya))

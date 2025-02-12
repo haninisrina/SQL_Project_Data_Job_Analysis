@@ -221,13 +221,13 @@ Result:
 | name       | -1          |
 
 🔍 Key Findings and Interpretation: <br /> 
-1️⃣ The company_id and name columns have n_distinct = -1
+📌 The company_id and name columns have n_distinct = -1
 → PostgreSQL considers all values ​​in these columns to be unique, which is common for Primary Keys (company_id) or different company names.
 
-2️⃣ The link_google column has n_distinct = -0.9998
+📌 The link_google column has n_distinct = -0.9998
 → Almost all rows have unique values ​​in this column, such as Google URLs that are unique to each entity.
 
-3️⃣ The link and thumbnail columns have lower n_distinct (-0.1868 and -0.2106)
+📌 The link and thumbnail columns have lower n_distinct (-0.1868 and -0.2106)
 → More frequent repeating values, such as multiple companies may have the same thumbnail or link.
 
 ```sql
@@ -257,23 +257,23 @@ Result:
 | job_id              | -1          |
 
 🔍 Key Findings and Interpretation:<br /> 
-1️⃣ job_id has n_distinct = -1
+📌 job_id has n_distinct = -1
 → All values are unique, confirming job_id as the Primary Key.
 
-2️⃣ company_id has n_distinct = 30,160
+📌 company_id has n_distinct = 30,160
 → Matches company_dim, meaning most job postings come from distinct companies.
 
-3️⃣ job_title (30,092 unique) vs. job_title_short (10 unique)
+📌 job_title (30,092 unique) vs. job_title_short (10 unique)
 → Job titles are highly diverse, but job_title_short groups them into 10 broader categories.
 
-4️⃣ job_location (3,976), search_location (141), job_country (135)
+📌 job_location (3,976), search_location (141), job_country (135)
 → job_location is where the job is offered, while search_location is the employer’s posting location.
 → job_country is a standardized version of search_location.
 
-5️⃣ job_via has n_distinct = 1,525
+📌 job_via has n_distinct = 1,525
 → Represents job posting platforms like LinkedIn or Trabajo.org.
 
-6️⃣ Salary & Job Type Insights:
+📌 Salary & Job Type Insights:
 → job_schedule_type (27 unique) covers Full-time, Part-time, Contractor, etc.
 → salary_rate (3 unique) likely represents yearly, hourly, or contract-based pay.
 → Many missing salary values suggest salaries are often not disclosed.
@@ -326,12 +326,46 @@ Result:
 📌 skill_id has n_distinct = -1
 → Each skill has a unique ID, confirming skill_id as a Primary Key for this table.
 
-
-
 - **Check for duplicate records (based on all columns)**
 ```sql
-SELECT link, thumbnail, link_google, name, COUNT(*)
-FROM company_dim
-GROUP BY link, thumbnail, link_google, name
+SELECT link, thumbnail, link_google, name, COUNT(*) 
+FROM company_dim 
+GROUP BY link, thumbnail, link_google, name 
 HAVING COUNT(*) > 1;
 ```
+Result:
+
+```sql
+SELECT 
+    job_work_from_home, job_posted_date, job_no_degree_mention, 
+    job_health_insurance, salary_year_avg, salary_hour_avg, 
+    search_location, salary_rate, job_title_short, job_title, 
+    job_location, job_via, job_schedule_type, job_country, 
+    company_id, COUNT(*) 
+FROM job_postings_fact 
+GROUP BY 
+    job_work_from_home, job_posted_date, job_no_degree_mention, 
+    job_health_insurance, salary_year_avg, salary_hour_avg, 
+    search_location, salary_rate, job_title_short, job_title, 
+    job_location, job_via, job_schedule_type, job_country, 
+    company_id
+HAVING COUNT(*) > 1
+ORDER BY company_id;
+```
+Result: 
+
+```sql
+SELECT job_id,skill_id, COUNT(*)
+FROM skills_job_dim
+GROUP BY job_id,skill_id
+HAVING COUNT(*) > 1;
+```
+Result:
+
+```sql
+SELECT skill_id,skills,type, COUNT(*)
+FROM skills_dim
+GROUP BY skill_id,skills,type
+HAVING COUNT(*) > 1;
+```
+Result: 
