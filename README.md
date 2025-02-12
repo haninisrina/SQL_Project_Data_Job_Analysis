@@ -16,21 +16,12 @@ WHERE table_schema = 'public';
 ```
 Result: 
 
-```json
-[
-  {
-    "table_name": "company_dim"
-  },
-  {
-    "table_name": "job_postings_fact"
-  },
-  {
-    "table_name": "skills_job_dim"
-  },
-  {
-    "table_name": "skills_dim"
-  }
-]
-```
+| Table Name          |
+|---------------------|
+| company_dim        |
+| job_postings_fact  |
+| skills_job_dim     |
+| skills_dim         |
+
 -**View table structure**:
 -**Check the number of rows and columns**:
