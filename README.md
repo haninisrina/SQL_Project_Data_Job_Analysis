@@ -220,7 +220,7 @@ Result:
 | company_id | -1          |
 | name       | -1          |
 
-🔍 Key Findings and Interpretation:
+🔍 Key Findings and Interpretation: <br /> 
 1️⃣ The company_id and name columns have n_distinct = -1
 → PostgreSQL considers all values ​​in these columns to be unique, which is common for Primary Keys (company_id) or different company names.
 
@@ -256,7 +256,7 @@ Result:
 | job_posted_date      | -0.5715932  |
 | job_id              | -1          |
 
-🔍 Key Findings and Interpretation:
+🔍 Key Findings and Interpretation:<br /> 
 1️⃣ job_id has n_distinct = -1
 → All values are unique, confirming job_id as the Primary Key.
 
@@ -296,7 +296,7 @@ Result:
 | skill_id   | 217         |
 | job_id     | -0.12514566 |
 
-🔍Key Findings and Interpretation:
+🔍Key Findings and Interpretation:<br /> 
 1️⃣ skill_id has n_distinct = 217
 → There are 217 unique skills linked to job postings.
 
@@ -316,7 +316,7 @@ Result:
 | skills     | -0.972973  |
 | skill_id   | -1         |
 
-🔍 Key Findings and Interpretation:
+🔍 Key Findings and Interpretation:<br /> 
 1️⃣ type has n_distinct = 10
 → There are 10 unique skill categories or types, likely grouping skills into broader classifications.
 
