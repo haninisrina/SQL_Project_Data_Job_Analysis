@@ -278,10 +278,10 @@ Result:
 → salary_rate (3 unique) likely represents yearly, hourly, or contract-based pay.
 → Many missing salary values suggest salaries are often not disclosed.
 
-7️⃣ Binary Columns (True/False):
+📌 Binary Columns (True/False):
 → job_work_from_home, job_no_degree_mention, job_health_insurance → Indicate remote work, degree requirements, and health benefits.
 
-8️⃣ job_posted_date has n_distinct = -0.5716
+📌 job_posted_date has n_distinct = -0.5716
 → Multiple jobs are posted on the same date, suggesting batch uploads
 
 ```sql
@@ -297,10 +297,10 @@ Result:
 | job_id     | -0.12514566 |
 
 🔍Key Findings and Interpretation:<br /> 
-1️⃣ skill_id has n_distinct = 217
+📌 skill_id has n_distinct = 217
 → There are 217 unique skills linked to job postings.
 
-2️⃣ job_id has n_distinct = -0.1251
+📌 job_id has n_distinct = -0.1251
 → Many job postings share the same skills, meaning multiple jobs require overlapping skill sets.
 
 ```sql
@@ -317,13 +317,13 @@ Result:
 | skill_id   | -1         |
 
 🔍 Key Findings and Interpretation:<br /> 
-1️⃣ type has n_distinct = 10
+📌 type has n_distinct = 10
 → There are 10 unique skill categories or types, likely grouping skills into broader classifications.
 
-2️⃣ skills has n_distinct = -0.973
+📌 skills has n_distinct = -0.973
 → Almost every row has a unique skill name, meaning skill descriptions are highly diverse.
 
-3️⃣ skill_id has n_distinct = -1
+📌 skill_id has n_distinct = -1
 → Each skill has a unique ID, confirming skill_id as a Primary Key for this table.
 
 
