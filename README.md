@@ -87,4 +87,36 @@ Result:
 | type       | text      |
 
 
--**Check the number of rows and columns**:
+- **Check the number of rows and columns**:
+```sql
+SELECT COUNT(*) AS total_rows FROM company_dim;
+```
+Result:
+| total_rows |
+|------------|
+| 140033     |
+
+```sql
+SELECT COUNT(*) AS total_rows FROM job_postings_fact;
+```
+Result:
+| total_rows |
+|------------|
+| 787686     |
+
+```sql
+SELECT COUNT(*) AS total_rows FROM skills_job_dim;
+```
+Result:
+| total_rows |
+|------------|
+| 3669604    |
+
+```sql
+SELECT COUNT(*) AS total_rows FROM skills_dim;
+```
+Result:
+| total_rows |
+|------------|
+| 259     |
+
