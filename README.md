@@ -8,3 +8,25 @@ The data used serves as the foundation for this analysis, offering detailed info
 - **Visual Studio Code**: A code editor employed for writing and executing SQL queries.  
 - **Git & GitHub**: Used for version control, project tracking, and sharing scripts and analyses.
 # Exploratory Data Analysis (EDA)  
+-**Check available tables**:
+SELECT table_name 
+FROM information_schema.tables 
+WHERE table_schema = 'public';
+
+[
+  {
+    "table_name": "company_dim"
+  },
+  {
+    "table_name": "job_postings_fact"
+  },
+  {
+    "table_name": "skills_job_dim"
+  },
+  {
+    "table_name": "skills_dim"
+  }
+]
+
+-**View table structure**:
+-**Check the number of rows and columns**:
