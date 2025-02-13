@@ -334,6 +334,12 @@ GROUP BY link, thumbnail, link_google, name
 HAVING COUNT(*) > 1;
 ```
 Result:
+| link | thumbnail | link_google | name | count |
+|------|-----------|-------------|------|-------|
+| No data  |
+
+🔍 Key Findings and Interpretation:<br /> 
+📌 The query checks for duplicate entries based on link, thumbnail, link_google, and name. Since the result is empty, no duplicate records exist in company_dim with the same combination of these columns.
 
 ```sql
 SELECT 
@@ -352,16 +358,21 @@ GROUP BY
 HAVING COUNT(*) > 1
 ORDER BY company_id;
 ```
-Result: 
-
+Result: Full results are available in the file: [duplicate_records_job_postings_fact](duplicate_records_job_postings_fact)
+🔍 Key Findings and Interpretation:<br /> 
+📌 538 duplicate data records exist in job_postings_fact. 
 ```sql
 SELECT job_id,skill_id, COUNT(*)
 FROM skills_job_dim
 GROUP BY job_id,skill_id
 HAVING COUNT(*) > 1;
 ```
-Result:
-
+Result: 
+| job_id | skill_id |count |
+|------|-----------|-------|
+| No data  |
+🔍 Key Findings and Interpretation:<br /> 
+📌the result is empty, no duplicate records exist in company_dim with the same combination of these columns
 ```sql
 SELECT skill_id,skills,type, COUNT(*)
 FROM skills_dim
@@ -369,3 +380,8 @@ GROUP BY skill_id,skills,type
 HAVING COUNT(*) > 1;
 ```
 Result: 
+| skill_id | skills | type | count |
+|------|-----------|-------------|-------|
+| No data  |
+🔍 Key Findings and Interpretation:<br /> 
+📌the result is empty, no duplicate records exist in company_dim with the same combination of these columns
