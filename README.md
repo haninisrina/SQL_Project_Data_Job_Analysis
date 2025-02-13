@@ -338,6 +338,7 @@ Result:
 |------|-----------|-------------|------|-------|
 | No data  |
 
+
 🔍 Key Findings and Interpretation:<br /> 
 📌 The query checks for duplicate entries based on link, thumbnail, link_google, and name. Since the result is empty, no duplicate records exist in company_dim with the same combination of these columns.
 
@@ -358,7 +359,7 @@ GROUP BY
 HAVING COUNT(*) > 1
 ORDER BY company_id;
 ```
-Result: Full results are available in the file: [duplicate_records_job_postings_fact.csv](duplicate_records_job_postings_fact.csv)
+Result: Full results are available in the file: [duplicate_records_job_postings_fact.csv](duplicate_records_job_postings_fact.csv)<br /> 
 🔍 Key Findings and Interpretation:<br /> 
 📌 538 duplicate data records exist in job_postings_fact. 
 ```sql
@@ -371,6 +372,7 @@ Result:
 | job_id | skill_id |count |
 |------|-----------|-------|
 | No data  |
+
 🔍 Key Findings and Interpretation:<br /> 
 📌the result is empty, no duplicate records exist in company_dim with the same combination of these columns
 ```sql
@@ -383,5 +385,6 @@ Result:
 | skill_id | skills | type | count |
 |------|-----------|-------------|-------|
 | No data  |
+
 🔍 Key Findings and Interpretation:<br /> 
 📌the result is empty, no duplicate records exist in company_dim with the same combination of these columns
