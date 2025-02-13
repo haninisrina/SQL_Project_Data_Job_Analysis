@@ -19,4 +19,7 @@ FROM job_postings_fact
 GROUP BY month, job_country
 ORDER BY month, count DESC
 
+SELECT *
+FROM job_postings_fact
+WHERE job_country= 'Indonesia'
 

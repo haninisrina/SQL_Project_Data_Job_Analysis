@@ -1,5 +1,5 @@
 
-/* Top-Demanded Skills for Data Analyst
+/* Optimal Skills for Data Analyst
 Question to answer: What are the optimal skills to learn (high demand and high-paying skill)
 Objective: reveals skills that offer job security (high demand) and financial benefits (high salaries).
 Offering strategic insights for career development in data analysis
