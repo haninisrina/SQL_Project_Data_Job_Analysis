@@ -12,6 +12,7 @@ and what company they are from
 SELECT 
     job_id,
     job_title,
+    job_title_short,
     job_location,
     job_schedule_type,
     salary_year_avg,
