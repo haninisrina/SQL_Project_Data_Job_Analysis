@@ -358,7 +358,7 @@ GROUP BY
 HAVING COUNT(*) > 1
 ORDER BY company_id;
 ```
-Result: Full results are available in the file: [duplicate_records_job_postings_fact](duplicate_records_job_postings_fact)
+Result: Full results are available in the file: [duplicate_records_job_postings_fact.csv](duplicate_records_job_postings_fact.csv)
 🔍 Key Findings and Interpretation:<br /> 
 📌 538 duplicate data records exist in job_postings_fact. 
 ```sql
