@@ -33,7 +33,7 @@ ORDER BY
     salary_year_avg DESC
 LIMIT 10;
 ```
-**Result:**
+**📝 Result:**
 | job_id   | job_title                                      | job_title_short | job_location | job_schedule_type | salary_year_avg | job_posted_date       | company_name                                  |
 |---------|-----------------------------------------------|----------------|--------------|-------------------|----------------|----------------------|----------------------------------------------|
 | 226942  | Data Analyst                                  | Data Analyst   | Anywhere     | Full-time         | 650000.0       | 2023-02-20 15:13:33  | Mantys                                       |
@@ -91,18 +91,20 @@ INNER JOIN skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
 ORDER BY
     salary_year_avg DESC;
 ```
-Result: Full results are available in the file [2.top_paying_jobs_skills.csv] (2. top_paying_jobs_skills.csv)<br /> 
+**📝 Result:** Full results are available in the file [2.top_paying_jobs_skills.csv] (2. top_paying_jobs_skills.csv)<br /> 
 
 **🔍 Key Insights** </br>
 📌 The top skills by frequency are SQL (8 occurrences), Python (7), and Tableau (6).
-These skills appear most frequently across different job listings.
+These skills appear most frequently across different job listings.</br>
 
 
 ### 3. Top-Demanded Skills for Data Analyst Remote Job
 **❓ Question to answer:** </br>
 <p> What are the most skills are required for data analyst jobs?</p> 
+
 **📊 What to Analyze:** </br>
 <p> Identify the top 5 in-demand skills for a data analyst in a remote job.</p> 
+
 **🎯 Objective:** </br>
 <p> Helping job seekers in the data analyst field understand which skills to develop based on job market. This insight allows job seekers to focus on acquiring the right technical and analytical competencies that align with industry needs.  </p> 
 
@@ -121,7 +123,7 @@ ORDER BY
 LIMIT 5;
 
 ```
-**Result:**
+**📝 Result:**
 
 | skills    | demand_count |
 |-----------|-------------|
@@ -132,20 +134,14 @@ LIMIT 5;
 | Power BI  | 2,609       |
 
 
-**🔍 Key Insights from the "Skills" Column** </br>
-<p> Insights on the Top 10 Most In-Demand Data Analyst Skills  </br>
-
-📌 SQL (7,291 job postings) → Still the #1 SkillSQL remains the most in-demand skill for data analysts, proving that database querying and management are fundamental in this field.Although demand has decreased compared to previous data, SQL remains a must-have skill for any data analyst.
-
+**🔍 Key Insights**</br>
+📌 SQL (7,291 job postings) → Still the #1 SkillSQL remains the most in-demand skill for data analysts, proving that database querying and management are fundamental in this field.Although demand has decreased compared to previous data, SQL remains a must-have skill for any data analyst.</br>
 📌 Excel (4,611 job postings) → Excel’s Relevance ContinuesDespite the rise of programming languages, Excel remains crucial for quick data analysis, reporting, and financial modeling.Companies still rely heavily on Excel, solidifying its place as a top skill for data analysts. </br>
-
 📌Python (4,330 job postings) → Essential for Automation & Data ProcessingPython maintains a strong position, highlighting its importance for data manipulation, automation, and advanced analytics.Its demand is close to Excel, reinforcing its growing necessity in the field. </br>
-
 📌 Tableau (3,745 job postings) → Leading in Data VisualizationTableau remains the top visualization tool, emphasizing the continued need for interactive dashboards and visual analytics.Companies continue to prioritize BI tools, making Tableau a must-have for data storytelling. </br>
-
 📌Power BI (2,609 job postings) → A Strong Competitor to TableauPower BI maintains high demand, especially in organizations using Microsoft’s ecosystem.The demand for both Tableau & Power BI suggests that visualization skills are essential for analysts.</p> 
 
-## 4. Top-Paying Skills for Data Analyst
+### 4. Top-Paying Skills for Data Analyst
 **❓ Question to answer:** </br>
 <p> What are the top skills based on salary in a remote job?</p> 
 
@@ -172,7 +168,7 @@ ORDER BY
     avg_salary DESC
 LIMIT 25;
 ```
-**Result:**
+**📝 Result:**
 
 | skills         | avg_salary |
 |---------------|------------|
@@ -202,25 +198,20 @@ LIMIT 25;
 | GCP           | 122,500    |
 | MicroStrategy | 121,619    |
 
-🔍 Key Insights High-Paying Skills for Remote Data Analysts  </br>
+**🔍 Key Insights High-Paying Skills for Remote Data Analysts**  </br>
 📌 Big Data & Cloud Dominate – PySpark ($208K) & Databricks ($141K) highlight demand for big data processing & cloud expertise.</br>
-
 📌 AI & ML Pay Well – Watson ($160K), DataRobot ($155K), and Scikit-learn ($125K) show AI-driven analytics is lucrative.</br>
-
 📌 DevOps & Version Control Matter – Bitbucket ($189K), GitLab ($154K), and Jenkins ($125K) prove workflow automation & collaboration tools are key.</br>
-
 📌 NoSQL & Advanced DB Skills Rewarded – Couchbase ($160K), Elasticsearch ($145K), and PostgreSQL ($123K) signal value in modern database tech.</br>
-
 📌 Cross-Functional Coding Adds Value – Swift ($153K), Golang ($145K), and Scala ($124K) highlight demand for scripting & backend integration.</br>
-
 💡 Bottom Line: To maximize remote earnings, focus on big data, cloud, AI, and automation.</br>
 
-## 5. Optimal Skills for Data Analyst
-**Question to answer:**<br /> 
+### 5. Optimal Skills for Data Analyst
+**❓ Question to answer:**<br /> 
 What are the optimal skills to learn (high demand and high-paying skill)
-**What to Analyze:**  <br /> 
+**📊 What to Analyze:**  <br /> 
 Identify the top high demand skills and associated with high average salariesfor data analyst role
-**Objective:**<br /> 
+**🎯 Objective:**<br /> 
 reveals skills that offer job security (high demand) and financial benefits (high salaries).
 Offering strategic insights for career development in data analysis<br /> 
 
@@ -246,7 +237,7 @@ ORDER BY
     demand_count DESC
 LIMIT 25;
 ```
-**Result:**
+**📝 Result:**
 | skill_id | skills      | demand_count | avg_salary ($) |
 |----------|------------|--------------|---------------:|
 | 8        | go         | 27           | 115,320        |
@@ -312,7 +303,7 @@ LIMIT 5;
 ;
 
 ```
-**Result:**
+**📝 Result:**
 
 | skills    | demand_count |
 |-----------|-------------|
@@ -331,9 +322,14 @@ LIMIT 5;
 
 
 ## 7. Companies Hiring the Most Data Analysts in Indonesia 
-**❓ Question to answer:** Which companies in Indonesia have the highest number of job postings for Data Analysts?
-**📊 What to Analyze:** The top hiring companies, whether they are startups, tech firms, or large corporations, and any hiring trends. 
-**🎯 Objective:** Helps job seekers target their applications toward companies that frequently hire Data Analysts, increasing their chances of securing a job.
+**❓ Question to answer:** </br>
+Which companies in Indonesia have the highest number of job postings for Data Analysts?
+
+**📊 What to Analyze:** </br>
+The top hiring companies, whether they are startups, tech firms, or large corporations, and any hiring trends.
+
+**🎯 Objective:** </br>
+Helps job seekers target their applications toward companies that frequently hire Data Analysts, increasing their chances of securing a job.
 
 ```sql
 SELECT 
@@ -348,7 +344,7 @@ GROUP BY company.company_id, company.name
 ORDER BY count DESC
 LIMIT 10;
 ```
-**Result :** 
+**📝 Result :** 
 | company_id | company_name                     | job_count |
 |------------|-------------------------------------|----------|
 | 359415     | Posloker                           | 30       |
@@ -369,16 +365,16 @@ LIMIT 10;
 
 **8. Growth of Data-Related Job Roles in Indonesia (2023)**
 
-**❓ Question to Answer:**
+**❓ Question to Answer:**</br>
 How has the demand for data-related job roles in Indonesia changed throughout 2023?
 
-**📊 What to Analyze:**
-- Quarterly growth trends of key data-related roles. </br>
-- Seasonal hiring patterns for data-related jobs. </br>
-- Differences in hiring trends between emerging and established roles.
-- The demand for junior vs. senior roles. </br>
+**📊 What to Analyze:**</br>
+<p> 1. Quarterly growth trends of key data-related roles. </br>
+2. Seasonal hiring patterns for data-related jobs. </br>
+3. Differences in hiring trends between emerging and established roles.
+4. The demand for junior vs. senior roles. </p>
 
-**🎯 Objective:**
+**🎯 Objective:**</br>
 Provide insights into the demand trends for data-related roles in Indonesia to help job seekers make informed career decisions. Understanding hiring trends allows professionals to identify in-demand skills and employers to align recruitment strategies accordingly.
 
 ```sql
@@ -421,7 +417,7 @@ growth_calculation AS (
 SELECT * FROM growth_calculation;
 
 ```
-**Result :** 
+**📝 Result :** 
 | company_id | company_name                     | job_count |
 |------------|-------------------------------------|----------|
 | 359415     | Posloker                           | 30       |
@@ -435,21 +431,21 @@ SELECT * FROM growth_calculation;
 | 18296      | GO-JEK                             | 19       |
 | 692        | Michael Page                      | 18       |
 
-**🔍 Key Insights:**
+**🔍 Key Insights:**</br>
 📌 Growth Rate of Job Postings Per Role </br>
 - __Data Analyst__ grew **152.27%** from Q3 (88) to Q4 (222). </br>
 - **Software Engineer** saw a **293.18%** increase from Q3 (44) to Q4 (173). </br>
 - **Data Engineer** rose by **52.44%** from Q3 (225) to Q4 (343). </br>
 - **Cloud Engineer** had the highest percentage growth (**285.71%**), from Q3 (14) to Q4 (54). </br>
 
-📌 Seasonal Hiring Patterns
+📌 Seasonal Hiring Patterns</br>
 - **Q4 consistently shows the highest hiring spike** across most roles.
 - **Q2 tends to have the lowest number of postings**.
 
-📌 Emerging vs. Established Roles
+📌 Emerging vs. Established Roles</br>
 - **High-demand roles**: Data Engineer, Data Scientist, and Data Analyst show **stable demand**. </br>
 - **Emerging roles**: Machine Learning Engineer and Cloud Engineer have **lower job postings** but show **sharp growth in Q4**, suggesting they are gaining traction. </br>
 
-📌 Junior vs. Senior Role Growth
+📌 Junior vs. Senior Role Growth</br>
 - **Junior and mid-level roles** see much faster growth than Senior Data Analyst, Senior Data Engineer, and Senior Data Scientist roles. </br>
 - This suggests companies are prioritizing **hiring entry-level and mid-level talent** rather than focusing on experienced professionals. </br>
