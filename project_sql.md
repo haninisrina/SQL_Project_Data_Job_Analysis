@@ -2,13 +2,13 @@
 ## For numbers 1 to 5, I will focus on data analysts in remote jobs to help understand the landscape of remote-friendly data analyst jobs, enabling professionals to apply for opportunities regardless of their location, making it possible to work for companies in different countries while staying in their home country.<br /> 
 
 ### 1. Top-Paying Data Job
-**❓ Question to answer:** What are the top-paying data analyst jobs?<br /> 
-**📊 What to Analyze:** <br /> 
+**❓ Question to answer:** What are the top-paying data analyst jobs?</p>
+**📊 What to Analyze:** 
 <p> The top 10 highest-paying Data Analyst roles that are available remotely
 and what company they are from<br /> 
-<p> Focuses on job postings with specified salaries (remove nulls) </p>
+    Focuses on job postings with specified salaries (remove nulls) </p>
 
-**🎯 Objective:** Highlight the top-paying opportunities for Data Analysts, offering insights into employment options and location flexibility <br />
+**🎯 Objective:** Highlight the top-paying opportunities for Data Analysts, offering insights into employment options and location flexibility </p>
 ```sql 
 SELECT 
     job_id,
