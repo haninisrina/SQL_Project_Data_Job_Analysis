@@ -199,21 +199,23 @@ LIMIT 25;
 | MicroStrategy | 121,619    |
 
 **🔍 Key Insights High-Paying Skills for Remote Data Analysts**  </br>
+<p>
 📌 Big Data & Cloud Dominate – PySpark ($208K) & Databricks ($141K) highlight demand for big data processing & cloud expertise.</br>
 📌 AI & ML Pay Well – Watson ($160K), DataRobot ($155K), and Scikit-learn ($125K) show AI-driven analytics is lucrative.</br>
 📌 DevOps & Version Control Matter – Bitbucket ($189K), GitLab ($154K), and Jenkins ($125K) prove workflow automation & collaboration tools are key.</br>
 📌 NoSQL & Advanced DB Skills Rewarded – Couchbase ($160K), Elasticsearch ($145K), and PostgreSQL ($123K) signal value in modern database tech.</br>
 📌 Cross-Functional Coding Adds Value – Swift ($153K), Golang ($145K), and Scala ($124K) highlight demand for scripting & backend integration.</br>
-💡 Bottom Line: To maximize remote earnings, focus on big data, cloud, AI, and automation.</br>
+💡 Bottom Line: To maximize remote earnings, focus on big data, cloud, AI, and automation.</p>
 
 ### 5. Optimal Skills for Data Analyst
 **❓ Question to answer:**<br /> 
-What are the optimal skills to learn (high demand and high-paying skill)
+<p> What are the optimal skills to learn (high demand and high-paying skill) </p>
+
 **📊 What to Analyze:**  <br /> 
-Identify the top high demand skills and associated with high average salariesfor data analyst role
+<p> Identify the top high demand skills and associated with high average salariesfor data analyst role </p>
+
 **🎯 Objective:**<br /> 
-reveals skills that offer job security (high demand) and financial benefits (high salaries).
-Offering strategic insights for career development in data analysis<br /> 
+<p> Reveals skills that offer job security (high demand) and financial benefits (high salaries). Offering strategic insights for career development in data analysis</p> 
 
 ```sql
 SELECT 
@@ -266,26 +268,31 @@ LIMIT 25;
 | 61       | sql server | 35           | 97,786         |
 | 9        | javascript | 20           | 97,587         |
 
-**🔍 Key Insights on High-Demand & High-Paying Data Analyst Skills**
+**🔍 Key Insights on High-Demand & High-Paying Data Analyst Skills**  </br>
 📌 High-Demand Programming Languages  </br>
-Python (236) and R (148) are the most sought-after languages.
-Their average salaries ($101K for Python, $100K for R) suggest they are essential but widely available skills. </br> 
+<p> Python (236) and R (148) are the most sought-after languages.
+Their average salaries ($101K for Python, $100K for R) suggest they are essential but widely available skills. </p> 
 📌 Cloud Tools & Big Data Technologies </br>
-Snowflake, Azure, AWS, and BigQuery are in high demand, with competitive salaries ($108K–$112K). </br>
+<p> Snowflake, Azure, AWS, and BigQuery are in high demand, with competitive salaries ($108K–$112K). </p>
 This highlights the growing reliance on cloud computing and big data in analytics.
 📌 Business Intelligence & Visualization  </br>
-Tableau (230) and Looker (49) emphasize the need for BI and visualization.
-With salaries around $99K–$103K, these tools are crucial for extracting actionable insights. </br>
+<p> Tableau (230) and Looker (49) emphasize the need for BI and visualization.
+With salaries around $99K–$103K, these tools are crucial for extracting actionable insights. </p>
 📌 Database Technologies </br>
-Oracle, SQL Server, NoSQL remain fundamental, with salaries $97K–$104K.
-Strong database expertise is still highly valuable in data management. </br>
+<p> Oracle, SQL Server, NoSQL remain fundamental, with salaries $97K–$104K.
+Strong database expertise is still highly valuable in data management. </p>
 
 ## For the numbers 6 and 8, I will focus on data analysis in Indonesia to help job seekers in Indonesia to understand the job market so that it gives a greater chance of being employed.
 
 ### 6. Top-Demanded Skills for Data Analyst in Indonesia
-**❓ Question to answer:** What are the most frequently required skills for Data Analyst roles in Indonesia? </br>
-**📊 What to Analyze:** Identify the top skills mentioned in job postings </br>
-**🎯 Objective:** Helps Indonesian job seekers prioritize the skills they need to learn and understand whether they need to acquire new tools such as SQL, Python, Power BI, or Tableau. </br>
+**❓ Question to answer:** </br>
+<p>What are the most frequently required skills for Data Analyst roles in Indonesia? </p>
+
+**📊 What to Analyze:** </br>
+<p>Identify the top skills mentioned in job postings </p>
+
+**🎯 Objective:** </br>
+<p> Helps Indonesian job seekers prioritize the skills they need to learn and understand whether they need to acquire new tools such as SQL, Python, Power BI, or Tableau. </br>
 
 ```sql
 SELECT 
@@ -313,23 +320,23 @@ LIMIT 5;
 | tableau   | 25       |
 | sas  | 18       |
 
-**🔍 Key Insights:**
-📌 SQL is the most sought-after skill, highlighting the importance of database management.
-📌 Despite advanced tools, Excel remains a key requirement.
-📌  🐍: With 33 mentions, Python is a must-have skill for automation and analytics.
-📌 Tableau and SAS emphasize the growing demand for business intelligence expertise.
+**🔍 Key Insights:** </br>
+📌 SQL is the most sought-after skill, highlighting the importance of database management.</br>
+📌 Despite advanced tools, Excel remains a key requirement.</br>
+📌  🐍: With 33 mentions, Python is a must-have skill for automation and analytics.</br>
+📌 Tableau and SAS emphasize the growing demand for business intelligence expertise.</br>
  💡 Bottom Line:Employers in Indonesia seek a mix of data processing (`SQL`, `Python`) and visualization (`Excel`, `Tableau`, `SAS`). 🚀 **Mastering these skills will increase your chances of landing a Data Analyst role in Indonesia!**
 
 
 ## 7. Companies Hiring the Most Data Analysts in Indonesia 
 **❓ Question to answer:** </br>
-Which companies in Indonesia have the highest number of job postings for Data Analysts?
+<p> Which companies in Indonesia have the highest number of job postings for Data Analysts? </p>
 
 **📊 What to Analyze:** </br>
-The top hiring companies, whether they are startups, tech firms, or large corporations, and any hiring trends.
+<p> The top hiring companies, whether they are startups, tech firms, or large corporations, and any hiring trends. </p>
 
 **🎯 Objective:** </br>
-Helps job seekers target their applications toward companies that frequently hire Data Analysts, increasing their chances of securing a job.
+<p> Helps job seekers target their applications toward companies that frequently hire Data Analysts, increasing their chances of securing a job. </p>
 
 ```sql
 SELECT 
@@ -358,7 +365,7 @@ LIMIT 10;
 | 18296      | GO-JEK                             | 19       |
 | 692        | Michael Page                      | 18       |
 
-**🔍 Key Insights:**
+**🔍 Key Insights:** </br>
 📌Top Employers: Posloker, Grab, and Monroe Consulting Group have the most Data Analyst job openings in Indonesia. </br>
 📌Diverse Hiring Landscape: Companies range from tech firms (Grab, GO-JEK) to recruitment agencies (Michael Page, Monroe Consulting). </br>
 📌Finance & Consulting Demand: Firms like BFI Finance and Asian Technology Solutions actively seek Data Analysts, highlighting strong demand in finance and IT consulting. </br>
@@ -366,7 +373,7 @@ LIMIT 10;
 **8. Growth of Data-Related Job Roles in Indonesia (2023)**
 
 **❓ Question to Answer:**</br>
-How has the demand for data-related job roles in Indonesia changed throughout 2023?
+<p> How has the demand for data-related job roles in Indonesia changed throughout 2023?</p>
 
 **📊 What to Analyze:**</br>
 <p> 1. Quarterly growth trends of key data-related roles. </br>
@@ -375,7 +382,7 @@ How has the demand for data-related job roles in Indonesia changed throughout 20
 4. The demand for junior vs. senior roles. </p>
 
 **🎯 Objective:**</br>
-Provide insights into the demand trends for data-related roles in Indonesia to help job seekers make informed career decisions. Understanding hiring trends allows professionals to identify in-demand skills and employers to align recruitment strategies accordingly.
+<p> Provide insights into the demand trends for data-related roles in Indonesia to help job seekers make informed career decisions. Understanding hiring trends allows professionals to identify in-demand skills and employers to align recruitment strategies accordingly. </p>
 
 ```sql
 -- 🔹 Identifying the Most Demanded Data-Related Jobs in Indonesia
