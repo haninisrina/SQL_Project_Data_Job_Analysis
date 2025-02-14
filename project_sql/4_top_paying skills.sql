@@ -1,5 +1,5 @@
 
-/* Top-Demanded Skills for Data Analyst
+/* Top-Paying Skills for Data Analyst
 Question to answer: What are the top skills based on salary?
 Objective: reveals how different skills impact salary levels for Data Analysts and 
 helps identify the most financially rewarding skills to acquire or improve
