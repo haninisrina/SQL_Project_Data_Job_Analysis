@@ -94,8 +94,8 @@ ORDER BY
 **📝 Result:** Full results are available in the file [2.top_paying_jobs_skills.csv] (2. top_paying_jobs_skills.csv)<br /> 
 
 **🔍 Key Insights** </br>
-📌 The top skills by frequency are SQL (8 occurrences), Python (7), and Tableau (6).
-These skills appear most frequently across different job listings.</br>
+<p> 📌 The top skills by frequency are SQL (8 occurrences), Python (7), and Tableau (6).
+These skills appear most frequently across different job listings.</p>
 
 
 ### 3. Top-Demanded Skills for Data Analyst Remote Job
@@ -135,10 +135,10 @@ LIMIT 5;
 
 
 **🔍 Key Insights**</br>
-📌 SQL (7,291 job postings) → Still the #1 SkillSQL remains the most in-demand skill for data analysts, proving that database querying and management are fundamental in this field.Although demand has decreased compared to previous data, SQL remains a must-have skill for any data analyst.</br>
-📌 Excel (4,611 job postings) → Excel’s Relevance ContinuesDespite the rise of programming languages, Excel remains crucial for quick data analysis, reporting, and financial modeling.Companies still rely heavily on Excel, solidifying its place as a top skill for data analysts. </br>
-📌Python (4,330 job postings) → Essential for Automation & Data ProcessingPython maintains a strong position, highlighting its importance for data manipulation, automation, and advanced analytics.Its demand is close to Excel, reinforcing its growing necessity in the field. </br>
-📌 Tableau (3,745 job postings) → Leading in Data VisualizationTableau remains the top visualization tool, emphasizing the continued need for interactive dashboards and visual analytics.Companies continue to prioritize BI tools, making Tableau a must-have for data storytelling. </br>
+<p> 📌 SQL (7,291 job postings) → Still the #1 SkillSQL remains the most in-demand skill for data analysts, proving that database querying and management are fundamental in this field.Although demand has decreased compared to previous data, SQL remains a must-have skill for any data analyst.</p>
+📌 Excel (4,611 job postings) → Excel’s Relevance ContinuesDespite the rise of programming languages, Excel remains crucial for quick data analysis, reporting, and financial modeling.Companies still rely heavily on Excel, solidifying its place as a top skill for data analysts. </p>
+📌Python (4,330 job postings) → Essential for Automation & Data ProcessingPython maintains a strong position, highlighting its importance for data manipulation, automation, and advanced analytics.Its demand is close to Excel, reinforcing its growing necessity in the field. </p>
+📌 Tableau (3,745 job postings) → Leading in Data VisualizationTableau remains the top visualization tool, emphasizing the continued need for interactive dashboards and visual analytics.Companies continue to prioritize BI tools, making Tableau a must-have for data storytelling. </p>
 📌Power BI (2,609 job postings) → A Strong Competitor to TableauPower BI maintains high demand, especially in organizations using Microsoft’s ecosystem.The demand for both Tableau & Power BI suggests that visualization skills are essential for analysts.</p> 
 
 ### 4. Top-Paying Skills for Data Analyst
