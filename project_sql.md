@@ -1,14 +1,18 @@
 # 📊 Analysis
 ## For numbers 1 to 5, I will focus on data analysts in remote jobs to help understand the landscape of remote-friendly data analyst jobs, enabling professionals to apply for opportunities regardless of their location, making it possible to work for companies in different countries while staying in their home country.<br /> 
 
-### 1. Top-Paying Data Job
-**❓ Question to answer:** What are the top-paying data analyst jobs?</p>
-**📊 What to Analyze:** 
-<p> The top 10 highest-paying Data Analyst roles that are available remotely
-and what company they are from<br /> 
-    Focuses on job postings with specified salaries (remove nulls) </p>
+### 1. Top-Paying Data Job 
+**❓ Question to answer:** </br>
+<p> What are the top-paying data analyst jobs?</p>
 
-**🎯 Objective:** Highlight the top-paying opportunities for Data Analysts, offering insights into employment options and location flexibility </p>
+**📊 What to Analyze:** </br>
+<p> 1. The top 10 highest-paying Data Analyst roles that are available remotely
+and what company they are from<br /> 
+    2. Focuses on job postings with specified salaries (remove nulls) </p>
+
+**🎯 Objective:** </br>
+<p> Highlight the top-paying opportunities for Data Analysts, offering insights into employment options and location flexibility </p>
+
 ```sql 
 SELECT 
     job_id,
@@ -49,13 +53,17 @@ LIMIT 10;
 📌 **Top Industries: Tech, Finance & Telecom** – Companies like Meta, AT&T, SmartAsset, and Pinterest offer top salaries, emphasizing the importance of analytics in user insights, finance, and operations. </br>
 
 ## 2. Top-Paying Data Skills
-**❓ Question to answer:** What are the skills required for the top-paying Data Analyst jobs?
-**📊 What to Analyze:** <br />
-- Using the first query that shows the top-paying jobs, we will look at the skills required for these jobs 
-- This will help us understand what skills we need to developskills, helping job seekers understand which skills to develop that align with top salaries 
-**🎯 Objective:**  Provides a detailed look at which high-paying jobs demand certain skills, helping job seekers understand which skills to develop that align with top salaries <br /> 
-```sql
+**❓ Question to answer:** </br>
+<p> What are the skills required for the top-paying Data Analyst jobs? </p>
 
+**📊 What to Analyze:** </br>
+<p> 1. Using the first query that shows the top-paying jobs, we will look at the skills required for these jobs </br>
+2. This will help us understand what skills we need to developskills, helping job seekers understand which skills to develop that align with top salaries </p>
+
+**🎯 Objective:** </br> 
+<p> Provides a detailed look at which high-paying jobs demand certain skills, helping job seekers understand which skills to develop that align with top salaries </p>
+
+```sql
 WITH top_paying_jobs AS (
     SELECT 
         job_id,
@@ -90,10 +98,14 @@ Result: Full results are available in the file [2.top_paying_jobs_skills.csv] (2
 These skills appear most frequently across different job listings.
 
 
-## 3. Top-Demanded Skills for Data Analyst Remote Job
-**❓ Question to answer:** What are the most skills are required for data analyst jobs?
-**📊 What to Analyze:** Identify the top 5 in-demand skills for a data analyst in a remote job.
-**🎯 Objective:** Helping job seekers in the data analyst field understand which skills to develop based on job market. This insight allows job seekers to focus on acquiring the right technical and analytical competencies that align with industry needs.  <br /> 
+### 3. Top-Demanded Skills for Data Analyst Remote Job
+**❓ Question to answer:** </br>
+<p> What are the most skills are required for data analyst jobs?</p> 
+**📊 What to Analyze:** </br>
+<p> Identify the top 5 in-demand skills for a data analyst in a remote job.</p> 
+**🎯 Objective:** </br>
+<p> Helping job seekers in the data analyst field understand which skills to develop based on job market. This insight allows job seekers to focus on acquiring the right technical and analytical competencies that align with industry needs.  </p> 
+
 ```sql
 SELECT 
     skills,
@@ -121,7 +133,7 @@ LIMIT 5;
 
 
 **🔍 Key Insights from the "Skills" Column** </br>
-Insights on the Top 10 Most In-Demand Data Analyst Skills  </br>
+<p> Insights on the Top 10 Most In-Demand Data Analyst Skills  </br>
 
 📌 SQL (7,291 job postings) → Still the #1 SkillSQL remains the most in-demand skill for data analysts, proving that database querying and management are fundamental in this field.Although demand has decreased compared to previous data, SQL remains a must-have skill for any data analyst.
 
@@ -131,12 +143,18 @@ Insights on the Top 10 Most In-Demand Data Analyst Skills  </br>
 
 📌 Tableau (3,745 job postings) → Leading in Data VisualizationTableau remains the top visualization tool, emphasizing the continued need for interactive dashboards and visual analytics.Companies continue to prioritize BI tools, making Tableau a must-have for data storytelling. </br>
 
-📌Power BI (2,609 job postings) → A Strong Competitor to TableauPower BI maintains high demand, especially in organizations using Microsoft’s ecosystem.The demand for both Tableau & Power BI suggests that visualization skills are essential for analysts. </br>
+📌Power BI (2,609 job postings) → A Strong Competitor to TableauPower BI maintains high demand, especially in organizations using Microsoft’s ecosystem.The demand for both Tableau & Power BI suggests that visualization skills are essential for analysts.</p> 
 
 ## 4. Top-Paying Skills for Data Analyst
-**❓ Question to answer:** What are the top skills based on salary in a remote job?
-**📊 What to Analyze:** Identify the top 25 skills for data analyst based on salary in a remote job
-**🎯 Objective:** reveals how different skills impact salary levels for Data Analysts in a remote job and helps identify the most financially rewarding skills to acquire or improve <br /> 
+**❓ Question to answer:** </br>
+<p> What are the top skills based on salary in a remote job?</p> 
+
+**📊 What to Analyze:** </br>
+<p> Identify the top 25 skills for data analyst based on salary in a remote job </p> 
+
+**🎯 Objective:** </br>
+<p> reveals how different skills impact salary levels for Data Analysts in a remote job and helps identify the most financially rewarding skills to acquire or improve </p> 
+
 ```sql
 SELECT 
     skills,
@@ -185,23 +203,27 @@ LIMIT 25;
 | MicroStrategy | 121,619    |
 
 🔍 Key Insights High-Paying Skills for Remote Data Analysts  </br>
-📌 Big Data & Cloud Dominate – PySpark ($208K) & Databricks ($141K) highlight demand for big data processing & cloud expertise.
+📌 Big Data & Cloud Dominate – PySpark ($208K) & Databricks ($141K) highlight demand for big data processing & cloud expertise.</br>
 
-📌 AI & ML Pay Well – Watson ($160K), DataRobot ($155K), and Scikit-learn ($125K) show AI-driven analytics is lucrative.
+📌 AI & ML Pay Well – Watson ($160K), DataRobot ($155K), and Scikit-learn ($125K) show AI-driven analytics is lucrative.</br>
 
-📌 DevOps & Version Control Matter – Bitbucket ($189K), GitLab ($154K), and Jenkins ($125K) prove workflow automation & collaboration tools are key.
+📌 DevOps & Version Control Matter – Bitbucket ($189K), GitLab ($154K), and Jenkins ($125K) prove workflow automation & collaboration tools are key.</br>
 
-📌 NoSQL & Advanced DB Skills Rewarded – Couchbase ($160K), Elasticsearch ($145K), and PostgreSQL ($123K) signal value in modern database tech.
+📌 NoSQL & Advanced DB Skills Rewarded – Couchbase ($160K), Elasticsearch ($145K), and PostgreSQL ($123K) signal value in modern database tech.</br>
 
-📌 Cross-Functional Coding Adds Value – Swift ($153K), Golang ($145K), and Scala ($124K) highlight demand for scripting & backend integration.
+📌 Cross-Functional Coding Adds Value – Swift ($153K), Golang ($145K), and Scala ($124K) highlight demand for scripting & backend integration.</br>
 
-💡 Bottom Line: To maximize remote earnings, focus on big data, cloud, AI, and automation.
+💡 Bottom Line: To maximize remote earnings, focus on big data, cloud, AI, and automation.</br>
 
 ## 5. Optimal Skills for Data Analyst
-- **Question to answer:**What are the optimal skills to learn (high demand and high-paying skill)
-- **What to Analyze:**  Identify the top high demand skills and associated with high average salariesfor data analyst role
-- **Objective:** reveals skills that offer job security (high demand) and financial benefits (high salaries).
+**Question to answer:**<br /> 
+What are the optimal skills to learn (high demand and high-paying skill)
+**What to Analyze:**  <br /> 
+Identify the top high demand skills and associated with high average salariesfor data analyst role
+**Objective:**<br /> 
+reveals skills that offer job security (high demand) and financial benefits (high salaries).
 Offering strategic insights for career development in data analysis<br /> 
+
 ```sql
 SELECT 
     skills_dim.skill_id,
