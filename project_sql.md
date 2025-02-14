@@ -1,12 +1,13 @@
 # 📊 Analysis
 ## For numbers 1 to 5, I will focus on data analysts in remote jobs to help understand the landscape of remote-friendly data analyst jobs, enabling professionals to apply for opportunities regardless of their location, making it possible to work for companies in different countries while staying in their home country.<br /> 
+
 ### 1. Top-Paying Data Job
-- **❓ Question to answer:** What are the top-paying data analyst jobs?<br /> 
-- ** 📊 What to Analyze:** <br /> 
-1. The top 10 highest-paying Data Analyst roles that are available remotely
+**❓ Question to answer:** What are the top-paying data analyst jobs?<br /> 
+**📊 What to Analyze:** <br /> 
+- The top 10 highest-paying Data Analyst roles that are available remotely
 and what company they are from<br /> 
-2. Focuses on job postings with specified salaries (remove nulls)<br /> 
-- **🎯 Objective:** Highlight the top-paying opportunities for Data Analysts, offering insights into employment options and location flexibility <br />
+- Focuses on job postings with specified salaries (remove nulls)<br />  
+**🎯 Objective:** Highlight the top-paying opportunities for Data Analysts, offering insights into employment options and location flexibility <br />
 ```sql 
 SELECT 
     job_id,
@@ -42,16 +43,16 @@ LIMIT 10;
 | 387860  | ERM Data Analyst                            | Data Analyst   | Anywhere     | Full-time         | 184000.0       | 2023-06-09 08:01:04  | Get It Recruit - Information Technology      |
 
 **🔍 Key Insights**  </br>
-📌 **Leadership Roles Pay More** – Director and Principal positions dominate the top salaries, highlighting the value of leadership and expertise.
-📌 **Mantys Leads with $650K** – The highest-paying role far exceeds others, likely due to executive responsibilities or performance-based pay.
-📌 **Top Industries: Tech, Finance & Telecom** – Companies like Meta, AT&T, SmartAsset, and Pinterest offer top salaries, emphasizing the importance of analytics in user insights, finance, and operations.
+📌 **Leadership Roles Pay More** – Director and Principal positions dominate the top salaries, highlighting the value of leadership and expertise. </br>
+📌 **Mantys Leads with $650K** – The highest-paying role far exceeds others, likely due to executive responsibilities or performance-based pay. </br>
+📌 **Top Industries: Tech, Finance & Telecom** – Companies like Meta, AT&T, SmartAsset, and Pinterest offer top salaries, emphasizing the importance of analytics in user insights, finance, and operations. </br>
 
 ## 2. Top-Paying Data Skills
-- **❓ Question to answer:** What are the skills required for the top-paying Data Analyst jobs?
-- **📊 What to Analyze:** <br />
- 1. Using the first query that shows the top-paying jobs, we will look at the skills required for these jobs
- 2. This will help us understand what skills we need to developskills, helping job seekers understand which skills to develop that align with top salaries 
-- **🎯 Objective:**  Provides a detailed look at which high-paying jobs demand certain skills, helping job seekers understand which skills to develop that align with top salaries <br /> 
+**❓ Question to answer:** What are the skills required for the top-paying Data Analyst jobs?
+**📊 What to Analyze:** <br />
+- Using the first query that shows the top-paying jobs, we will look at the skills required for these jobs 
+- This will help us understand what skills we need to developskills, helping job seekers understand which skills to develop that align with top salaries 
+**🎯 Objective:**  Provides a detailed look at which high-paying jobs demand certain skills, helping job seekers understand which skills to develop that align with top salaries <br /> 
 ```sql
 
 WITH top_paying_jobs AS (
@@ -89,9 +90,9 @@ These skills appear most frequently across different job listings.
 
 
 ## 3. Top-Demanded Skills for Data Analyst Remote Job
-- **❓ Question to answer:** What are the most skills are required for data analyst jobs?
-- **📊 What to Analyze:** Identify the top 5 in-demand skills for a data analyst in a remote job.
-- **🎯 Objective:** Helping job seekers in the data analyst field understand which skills to develop based on job market. This insight allows job seekers to focus on acquiring the right technical and analytical competencies that align with industry needs.  <br /> 
+**❓ Question to answer:** What are the most skills are required for data analyst jobs?
+**📊 What to Analyze:** Identify the top 5 in-demand skills for a data analyst in a remote job.
+**🎯 Objective:** Helping job seekers in the data analyst field understand which skills to develop based on job market. This insight allows job seekers to focus on acquiring the right technical and analytical competencies that align with industry needs.  <br /> 
 ```sql
 SELECT 
     skills,
@@ -119,23 +120,22 @@ LIMIT 5;
 
 
 **🔍 Key Insights from the "Skills" Column** </br>
-Insights on the Top 10 Most In-Demand Data Analyst Skills (Latest Data)
+Insights on the Top 10 Most In-Demand Data Analyst Skills  </br>
 
 📌 SQL (7,291 job postings) → Still the #1 SkillSQL remains the most in-demand skill for data analysts, proving that database querying and management are fundamental in this field.Although demand has decreased compared to previous data, SQL remains a must-have skill for any data analyst.
 
-📌 Excel (4,611 job postings) → Excel’s Relevance ContinuesDespite the rise of programming languages, Excel remains crucial for quick data analysis, reporting, and financial modeling.Companies still rely heavily on Excel, solidifying its place as a top skill for data analysts.
+📌 Excel (4,611 job postings) → Excel’s Relevance ContinuesDespite the rise of programming languages, Excel remains crucial for quick data analysis, reporting, and financial modeling.Companies still rely heavily on Excel, solidifying its place as a top skill for data analysts. </br>
 
-📌Python (4,330 job postings) → Essential for Automation & Data ProcessingPython maintains a strong position, highlighting its importance for data manipulation, automation, and advanced analytics.Its demand is close to Excel, reinforcing its growing necessity in the field.
+📌Python (4,330 job postings) → Essential for Automation & Data ProcessingPython maintains a strong position, highlighting its importance for data manipulation, automation, and advanced analytics.Its demand is close to Excel, reinforcing its growing necessity in the field. </br>
 
-📌 Tableau (3,745 job postings) → Leading in Data VisualizationTableau remains the top visualization tool, emphasizing the continued need for interactive dashboards and visual analytics.Companies continue to prioritize BI tools, making Tableau a must-have for data storytelling.
+📌 Tableau (3,745 job postings) → Leading in Data VisualizationTableau remains the top visualization tool, emphasizing the continued need for interactive dashboards and visual analytics.Companies continue to prioritize BI tools, making Tableau a must-have for data storytelling. </br>
 
-📌Power BI (2,609 job postings) → A Strong Competitor to TableauPower BI maintains high demand, especially in organizations using Microsoft’s ecosystem.The demand for both Tableau & Power BI suggests that visualization skills are essential for analysts.
+📌Power BI (2,609 job postings) → A Strong Competitor to TableauPower BI maintains high demand, especially in organizations using Microsoft’s ecosystem.The demand for both Tableau & Power BI suggests that visualization skills are essential for analysts. </br>
 
 ## 4. Top-Paying Skills for Data Analyst
-- **❓ Question to answer:** What are the top skills based on salary in a remote job?
-- **📊 What to Analyze:** Identify the top 25 skills for data analyst based on salary in a remote job
-- **🎯 Objective:** reveals how different skills impact salary levels for Data Analysts in a remote job and 
-helps identify the most financially rewarding skills to acquire or improve <br /> 
+**❓ Question to answer:** What are the top skills based on salary in a remote job?
+**📊 What to Analyze:** Identify the top 25 skills for data analyst based on salary in a remote job
+**🎯 Objective:** reveals how different skills impact salary levels for Data Analysts in a remote job and helps identify the most financially rewarding skills to acquire or improve <br /> 
 ```sql
 SELECT 
     skills,
@@ -253,25 +253,25 @@ LIMIT 25;
 | 9        | javascript | 20           | 97,587         |
 
 **🔍 Key Insights on High-Demand & High-Paying Data Analyst Skills**
-📌 High-Demand Programming Languages
+📌 High-Demand Programming Languages  </br>
 Python (236) and R (148) are the most sought-after languages.
-Their average salaries ($101K for Python, $100K for R) suggest they are essential but widely available skills.
-📌 Cloud Tools & Big Data Technologies
-Snowflake, Azure, AWS, and BigQuery are in high demand, with competitive salaries ($108K–$112K).
+Their average salaries ($101K for Python, $100K for R) suggest they are essential but widely available skills. </br> 
+📌 Cloud Tools & Big Data Technologies </br>
+Snowflake, Azure, AWS, and BigQuery are in high demand, with competitive salaries ($108K–$112K). </br>
 This highlights the growing reliance on cloud computing and big data in analytics.
-📌 Business Intelligence & Visualization
+📌 Business Intelligence & Visualization  </br>
 Tableau (230) and Looker (49) emphasize the need for BI and visualization.
-With salaries around $99K–$103K, these tools are crucial for extracting actionable insights.
-📌 Database Technologies
+With salaries around $99K–$103K, these tools are crucial for extracting actionable insights. </br>
+📌 Database Technologies </br>
 Oracle, SQL Server, NoSQL remain fundamental, with salaries $97K–$104K.
-Strong database expertise is still highly valuable in data management.
+Strong database expertise is still highly valuable in data management. </br>
 
 ## For the numbers 6 and 8, I will focus on data analysis in Indonesia to help job seekers in Indonesia to understand the job market so that it gives a greater chance of being employed.
 
-## 6. Top-Demanded Skills for Data Analyst in Indonesia
-- **Question to answer:** What are the most frequently required skills for Data Analyst roles in Indonesia?
-- **What to Analyze:** Identify the top skills mentioned in job postings
-- **Objective:** Helps Indonesian job seekers prioritize the skills they need to learn and understand whether they need to acquire new tools such as SQL, Python, Power BI, or Tableau.
+### 6. Top-Demanded Skills for Data Analyst in Indonesia
+**❓ Question to answer:** What are the most frequently required skills for Data Analyst roles in Indonesia? </br>
+**📊 What to Analyze:** Identify the top skills mentioned in job postings </br>
+**🎯 Objective:** Helps Indonesian job seekers prioritize the skills they need to learn and understand whether they need to acquire new tools such as SQL, Python, Power BI, or Tableau. </br>
 
 ```sql
 SELECT 
@@ -308,9 +308,9 @@ LIMIT 5;
 
 
 ## 7. Companies Hiring the Most Data Analysts in Indonesia 
-- **❓ Question to answer:** Which companies in Indonesia have the highest number of job postings for Data Analysts?
-- **📊 What to Analyze:** The top hiring companies, whether they are startups, tech firms, or large corporations, and any hiring trends.
-- **🎯 Objective:** Helps job seekers target their applications toward companies that frequently hire Data Analysts, increasing their chances of securing a job.
+**❓ Question to answer:** Which companies in Indonesia have the highest number of job postings for Data Analysts?
+**📊 What to Analyze:** The top hiring companies, whether they are startups, tech firms, or large corporations, and any hiring trends. 
+**🎯 Objective:** Helps job seekers target their applications toward companies that frequently hire Data Analysts, increasing their chances of securing a job.
 
 ```sql
 SELECT 
@@ -340,20 +340,20 @@ LIMIT 10;
 | 692        | Michael Page                      | 18       |
 
 **🔍 Key Insights:**
-📌Top Employers: Posloker, Grab, and Monroe Consulting Group have the most Data Analyst job openings in Indonesia.
-📌Diverse Hiring Landscape: Companies range from tech firms (Grab, GO-JEK) to recruitment agencies (Michael Page, Monroe Consulting).
-📌Finance & Consulting Demand: Firms like BFI Finance and Asian Technology Solutions actively seek Data Analysts, highlighting strong demand in finance and IT consulting.
+📌Top Employers: Posloker, Grab, and Monroe Consulting Group have the most Data Analyst job openings in Indonesia. </br>
+📌Diverse Hiring Landscape: Companies range from tech firms (Grab, GO-JEK) to recruitment agencies (Michael Page, Monroe Consulting). </br>
+📌Finance & Consulting Demand: Firms like BFI Finance and Asian Technology Solutions actively seek Data Analysts, highlighting strong demand in finance and IT consulting. </br>
 
 **8. Growth of Data-Related Job Roles in Indonesia (2023)**
 
 **❓ Question to Answer:**
 How has the demand for data-related job roles in Indonesia changed throughout 2023?
 
-📊 What to Analyze:
-- Quarterly growth trends of key data-related roles.
-- Seasonal hiring patterns for data-related jobs.
+**📊 What to Analyze:**
+- Quarterly growth trends of key data-related roles. </br>
+- Seasonal hiring patterns for data-related jobs. </br>
 - Differences in hiring trends between emerging and established roles.
-- The demand for junior vs. senior roles.
+- The demand for junior vs. senior roles. </br>
 
 **🎯 Objective:**
 Provide insights into the demand trends for data-related roles in Indonesia to help job seekers make informed career decisions. Understanding hiring trends allows professionals to identify in-demand skills and employers to align recruitment strategies accordingly.
@@ -413,20 +413,20 @@ SELECT * FROM growth_calculation;
 | 692        | Michael Page                      | 18       |
 
 **🔍 Key Insights:**
-📌 Growth Rate of Job Postings Per Role
-- __Data Analyst__ grew **152.27%** from Q3 (88) to Q4 (222).
-- **Software Engineer** saw a **293.18%** increase from Q3 (44) to Q4 (173).
-- **Data Engineer** rose by **52.44%** from Q3 (225) to Q4 (343).
-- **Cloud Engineer** had the highest percentage growth (**285.71%**), from Q3 (14) to Q4 (54).
+📌 Growth Rate of Job Postings Per Role </br>
+- __Data Analyst__ grew **152.27%** from Q3 (88) to Q4 (222). </br>
+- **Software Engineer** saw a **293.18%** increase from Q3 (44) to Q4 (173). </br>
+- **Data Engineer** rose by **52.44%** from Q3 (225) to Q4 (343). </br>
+- **Cloud Engineer** had the highest percentage growth (**285.71%**), from Q3 (14) to Q4 (54). </br>
 
 📌 Seasonal Hiring Patterns
 - **Q4 consistently shows the highest hiring spike** across most roles.
 - **Q2 tends to have the lowest number of postings**.
 
 📌 Emerging vs. Established Roles
-- **High-demand roles**: Data Engineer, Data Scientist, and Data Analyst show **stable demand**.
-- **Emerging roles**: Machine Learning Engineer and Cloud Engineer have **lower job postings** but show **sharp growth in Q4**, suggesting they are gaining traction.
+- **High-demand roles**: Data Engineer, Data Scientist, and Data Analyst show **stable demand**. </br>
+- **Emerging roles**: Machine Learning Engineer and Cloud Engineer have **lower job postings** but show **sharp growth in Q4**, suggesting they are gaining traction. </br>
 
 📌 Junior vs. Senior Role Growth
-- **Junior and mid-level roles** see much faster growth than Senior Data Analyst, Senior Data Engineer, and Senior Data Scientist roles.
-- This suggests companies are prioritizing **hiring entry-level and mid-level talent** rather than focusing on experienced professionals.
+- **Junior and mid-level roles** see much faster growth than Senior Data Analyst, Senior Data Engineer, and Senior Data Scientist roles. </br>
+- This suggests companies are prioritizing **hiring entry-level and mid-level talent** rather than focusing on experienced professionals. </br>
