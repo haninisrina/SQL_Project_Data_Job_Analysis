@@ -91,7 +91,8 @@ INNER JOIN skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
 ORDER BY
     salary_year_avg DESC;
 ```
-**📝 Result:** Full results are available in the file [2_top_paying_jobs_skills.csv] (2_top_paying_jobs_skills.csv) <br /> 
+**📝 Result:** Full results are available in the file 
+[2_top_paying_jobs_skills.csv] (2_top_paying_jobs_skills.csv) <br /> 
 
 **🔍 Key Insights** </br>
 <p> 📌 The top skills by frequency are SQL (8 occurrences), Python (7), and Tableau (6).
