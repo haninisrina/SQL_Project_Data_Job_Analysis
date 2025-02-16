@@ -369,7 +369,7 @@ LIMIT 10;
 📌**Diverse Hiring Landscape:** Companies range from tech firms (Grab, GO-JEK) to recruitment agencies (Michael Page, Monroe Consulting). </br>
 📌**Finance & Consulting Demand:** Firms like BFI Finance and Asian Technology Solutions actively seek Data Analysts, highlighting strong demand in finance and IT consulting. </br>
 
-**8. Growth of Data-Related Job Roles in Indonesia (2023)**
+### 8. Growth of Data-Related Job Roles in Indonesia (2023)
 
 **❓ Question to Answer:**</br>
 <p> How has the demand for data-related job roles in Indonesia changed throughout 2023?</p>
@@ -424,18 +424,49 @@ SELECT * FROM growth_calculation;
 
 ```
 **📝 Result :** 
-| company_id | company_name                     | job_count |
-|------------|-------------------------------------|----------|
-| 359415     | Posloker                           | 30       |
-| 15305      | Grab                               | 27       |
-| 3607       | Monroe Consulting Group           | 25       |
-| 44929      | Asian Technology Solutions        | 25       |
-| 119434     | PT BFI Finance Indonesia Tbk      | 23       |
-| 28938      | Accord Innovations                | 22       |
-| 44637      | Glints                             | 22       |
-| 72638      | Diksha Teknologi Indonesia        | 19       |
-| 18296      | GO-JEK                             | 19       |
-| 692        | Michael Page                      | 18       |
+| job_title_short            | quarter | job_count | prev_quarter_count | growth_percentage |
+|----------------------------|---------|-----------|---------------------|-------------------|
+| Business Analyst          | 1       | 29        | null                | null              |
+| Business Analyst          | 2       | 28        | 29                  | -3.45             |
+| Business Analyst          | 3       | 26        | 28                  | -7.14             |
+| Business Analyst          | 4       | 32        | 26                  | 23.08             |
+| Cloud Engineer            | 1       | 17        | null                | null              |
+| Cloud Engineer            | 2       | 16        | 17                  | -5.88             |
+| Cloud Engineer            | 3       | 14        | 16                  | -12.50            |
+| Cloud Engineer            | 4       | 54        | 14                  | 285.71            |
+| Data Analyst              | 1       | 81        | null                | null              |
+| Data Analyst              | 2       | 70        | 81                  | -13.58            |
+| Data Analyst              | 3       | 88        | 70                  | 25.71             |
+| Data Analyst              | 4       | 222       | 88                  | 152.27            |
+| Data Engineer             | 1       | 285       | null                | null              |
+| Data Engineer             | 2       | 192       | 285                 | -32.63            |
+| Data Engineer             | 3       | 225       | 192                 | 17.19             |
+| Data Engineer             | 4       | 343       | 225                 | 52.44             |
+| Data Scientist            | 1       | 165       | null                | null              |
+| Data Scientist            | 2       | 93        | 165                 | -43.64            |
+| Data Scientist            | 3       | 142       | 93                  | 52.69             |
+| Data Scientist            | 4       | 250       | 142                 | 76.06             |
+| Machine Learning Engineer | 1       | 14        | null                | null              |
+| Machine Learning Engineer | 2       | 9         | 14                  | -35.71            |
+| Machine Learning Engineer | 3       | 17        | 9                   | 88.89             |
+| Machine Learning Engineer | 4       | 26        | 17                  | 52.94             |
+| Senior Data Analyst       | 1       | 10        | null                | null              |
+| Senior Data Analyst       | 2       | 4         | 10                  | -60.00            |
+| Senior Data Analyst       | 3       | 13        | 4                   | 225.00            |
+| Senior Data Analyst       | 4       | 25        | 13                  | 92.31             |
+| Senior Data Engineer      | 1       | 35        | null                | null              |
+| Senior Data Engineer      | 2       | 26        | 35                  | -25.71            |
+| Senior Data Engineer      | 3       | 26        | 26                  | 0.00              |
+| Senior Data Engineer      | 4       | 32        | 26                  | 23.08             |
+| Senior Data Scientist     | 1       | 30        | null                | null              |
+| Senior Data Scientist     | 2       | 27        | 30                  | -10.00            |
+| Senior Data Scientist     | 3       | 16        | 27                  | -40.74            |
+| Senior Data Scientist     | 4       | 38        | 16                  | 137.50            |
+| Software Engineer         | 1       | 47        | null                | null              |
+| Software Engineer         | 2       | 25        | 47                  | -46.81            |
+| Software Engineer         | 3       | 44        | 25                  | 76.00             |
+| Software Engineer         | 4       | 173       | 44                  | 293.18            |
+
 
 **🔍 Key Insights:**</br>
 📌 **Growth Rate of Job Postings Per Role** </br>
